@@ -10,12 +10,12 @@
     <title>EpicCars</title>
 </head>
 
-<body>
+<body class="h-dvh bg-black">
     <div class="flex flex-col items-center justify-center gap-6 ">
-        <div class="navbar bg-base-200 shadow-sm mb-4">
+        <div class="navbar bg-white/5 shadow-sm mb-4 border-b border-zinc-900">
             <a class="btn btn-ghost text-xl">EpicCars</a>
         </div>
-        <a href="/cars/form" class="btn btn-primary">
+        <a href="/cars/form" class="btn btn-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-circle-plus-icon lucide-circle-plus">
@@ -27,14 +27,14 @@
         </a>
 
 
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+        <main class="flex flex-wrap flex-row justify-center gap-4 place-items-center">
 
-            <div th:each="car : ${cars}" class="card card-border bg-base-300 w-96">
+            <div th:each="car : ${cars}" class="card card-border bg-white/5 w-96">
                 <div class="card-body items-center">
-                    <h2 class="card-title" th:text="${car.title}"></h2>
-                    <p th:text="${car.description}"></p>
-                    <p th:text="${car.value}"></p>
-                    <img th:src="${car.img}" alt="">
+                    <h2 class="card-title text-2xl font-bold" th:text="${car.title}"></h2>
+                    <img th:src="${car.img}" alt="" class="rounded-md border border-white/5">
+                    <span class="flex flex-row font-semibold text-xl">R$<p th:text="${car.value}"></p>,00</span>
+                    <p th:text="${car.description}" class="font-thin text-sm"></p>
                 </div>
                 <div class="card-actions justify-end m-4">
                     <button class="btn btn-error btn-soft">apagar</button>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
 
-<head data-theme="dracula">
+<head>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
@@ -11,11 +11,38 @@
 </head>
 
 <body>
+    <div class="flex flex-col items-center justify-center gap-6 ">
+        <div class="navbar bg-base-200 shadow-sm mb-4">
+            <a class="btn btn-ghost text-xl">EpicCars</a>
+        </div>
+        <a href="/cars/form" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-circle-plus-icon lucide-circle-plus">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8" />
+                <path d="M12 8v8" />
+            </svg>
+            Nova Listagem
+        </a>
 
-    <div class="navbar bg-base-100 shadow-sm">
-        <a class="btn btn-ghost text-xl">EpicCars</a>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+
+            <div th:each="car : ${cars}" class="card card-border bg-base-300 w-96">
+                <div class="card-body items-center">
+                    <h2 class="card-title" th:text="${car.title}"></h2>
+                    <p th:text="${car.description}"></p>
+                    <p th:text="${car.value}">,00R$</p>
+                    <img th:src="${car.img}" alt="">
+                </div>
+                <div class="card-actions justify-end m-4">
+                    <button class="btn btn-error btn-soft">apagar</button>
+                </div>
+            </div>
+
+        </main>
     </div>
-
 </body>
 
 </html>

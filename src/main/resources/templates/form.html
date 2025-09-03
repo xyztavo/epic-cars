@@ -10,12 +10,12 @@
     <title>EpicCars</title>
 </head>
 
-<body>
+<body class="h-dvh bg-black">
     <div class="flex flex-col items-center justify-center gap-6 ">
-        <div class="navbar bg-base-200 shadow-sm mb-4">
+        <div class="navbar bg-white/5 shadow-sm mb-4">
             <a class="btn btn-ghost text-xl">EpicCars</a>
         </div>
-        <a href="/cars" class="btn btn-primary">
+        <a href="/cars" class="btn btn-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-clipboard-list-icon lucide-clipboard-list">
@@ -30,36 +30,36 @@
         </a>
 
         <form action="" method="post"
-            class="flex flex-col gap-4 items-center justify-center border bg-base-300 border-zinc-900 p-4 rounded-md w-80">
-            <h2 class="font-bold text-primary text-2xl">Nova Listagem</h2>
+            class="flex flex-col gap-4 items-center justify-center border bg-white/5 border-zinc-900 p-4 rounded-md w-80">
+            <h2 class="font-bold text-secondary text-2xl">Nova Listagem</h2>
 
             <fieldset class="fieldset w-full" required>
                 <legend class="fieldset-legend">Título</legend>
-                <input type="text" class="input" name="title" placeholder="Título da tarefa" />
+                <input type="text" class="input bg-black" name="title" placeholder="Título da listagem" />
                 <p class="label">campo obrigatório</p>
             </fieldset>
 
             <fieldset class="fieldset  w-full" required>
                 <legend class="fieldset-legend">Descrição</legend>
-                <input type="text" class="input" name="description" minlength="10" placeholder="Descrição da tarefa" />
+                <input type="text" class="input bg-black" name="description" minlength="10" placeholder="Descrição da listagem" />
                 <p class="label">Pelo menos 10 caracteres</p>
             </fieldset>
 
 
             <fieldset class="fieldset  w-full" required>
                 <legend class="fieldset-legend">Valor</legend>
-                <input type="number" class="input" name="value" max="1000000000" />
+                <input type="number" class="input bg-black" name="value" max="1000000000" />
                 <p class="label">O valor de seu carro</p>
             </fieldset>
 
             <fieldset class="fieldset w-full" required>
                 <legend class="fieldset-legend">Imagem</legend>
-                <input type="text" class="input" name="img" />
+                <input type="text" class="input bg-black" name="img" placeholder="https://...." />
                 <p class="label">A url da imagem do carro.</p>
             </fieldset>
 
             <div class="flex flex-row items-center justify-center gap-6">
-                <button class="btn btn-primary">
+                <button class="btn btn-secondary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-check-icon lucide-check">

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.etecia</groupId>
-	<artifactId>epictask</artifactId>
+	<artifactId>epiccars</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>epictask</name>
+	<name>epiccars</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
