@@ -25,6 +25,10 @@
             </svg>
             Nova Listagem
         </a>
+        <div th:if="${message}" role="alert" class="alert alert-success alert-soft m-4">
+            <span th:text="${message}"></span>
+        </div>
+
 
 
         <main class="flex flex-wrap flex-row justify-center gap-4 place-items-center">
